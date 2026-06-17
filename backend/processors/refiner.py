@@ -12,7 +12,11 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 REFINE_SYSTEM_PROMPT = """You are a course planning assistant. The mentor wants to refine their course plan.
 Based on their refinement request and the current plan, return an updated plan.
-Return ONLY valid JSON matching the exact same schema as the current plan, no other text, no markdown."""
+Return ONLY valid JSON matching the exact same schema as the current plan, no other text, no markdown.
+Every module MUST have these fields: title, learning_objectives, lessons, prerequisites, assessment.
+Every lesson MUST have these fields: title, objective, resources, difficulty.
+Every resource MUST have these fields: title, url, type.
+Do not drop any fields from the schema."""
 
 def refine_plan(current_plan: CoursePlan, refinement: str) -> CoursePlan:
     logger.info(f"Refining plan: {refinement}")
