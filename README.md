@@ -1,4 +1,9 @@
 # AI Course Planning Assistant
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.x-red)
+![Groq](https://img.shields.io/badge/LLM-Groq-orange)
+![Cloud Run](https://img.shields.io/badge/Deployed-Cloud_Run-blue)
 
 A conversational AI assistant that helps mentors design structured courses through guided back-and-forth conversation. The mentor describes their course, the assistant asks follow-up questions, and generates a fully structured course plan that can be refined, edited, and exported as JSON.
 
