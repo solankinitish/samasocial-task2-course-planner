@@ -1,8 +1,9 @@
 import streamlit as st
 import requests
 import json
+import os
 
-BASE_URL = "http://127.0.0.1:8000/api/v1"
+BASE_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8000/api/v1")
 
 def create_session():
     response = requests.post(f"{BASE_URL}/session/create")
